@@ -1,9 +1,12 @@
 package ru.mrsash.testtask.appsmart.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,6 +21,9 @@ import java.util.UUID;
 @Entity
 @Setter
 @Getter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "product")
 public class Product {
 
@@ -27,7 +33,7 @@ public class Product {
     private UUID id;
 
     @Column(name = "customer_id")
-    private UUID customer;
+    private UUID customerId;
 
     @Column(name = "title")
     private String title;
@@ -41,11 +47,11 @@ public class Product {
     @Column(name = "is_deleted", nullable = false)
     private boolean deleted;
 
-    @CreatedDate
+    @CreationTimestamp
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
-    @LastModifiedDate
+    @UpdateTimestamp
     @Column(name = "modified_at")
     private LocalDateTime modifiedAt;
 }
