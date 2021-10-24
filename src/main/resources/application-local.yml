@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: costumer-products-service
+    name: customer-products-service
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5433/cp_service
