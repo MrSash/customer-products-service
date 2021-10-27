@@ -1,4 +1,4 @@
-package ru.mrsash.testtask.appsmart.service;
+package ru.mrsash.testtask.appsmart.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import ru.mrsash.testtask.appsmart.dto.AuthDto;
 import ru.mrsash.testtask.appsmart.dto.AuthRequestDto;
 import ru.mrsash.testtask.appsmart.exception.UserPrincipalForbidden;
+import ru.mrsash.testtask.appsmart.service.AuthService;
 import ru.mrsash.testtask.appsmart.util.JwtUtils;
 
 @Service
